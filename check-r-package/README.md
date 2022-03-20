@@ -44,7 +44,9 @@ steps:
     extra-packages: rcmdcheck
 - uses: r-lib/actions/check-r-package@v2
   with:
-    error-on: error
+    args: 'c("--no-manual", "--as-cran")'
+    error-on: '"error"'
+    check-dir: '"check"'
 ```
 
 # License
